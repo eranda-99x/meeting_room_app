@@ -121,11 +121,11 @@ class Common {
   }
 
   static Future showSuccess({String? title}) async {
-    Timer? _timer;
+    Timer? timer;
     return await Get.dialog(
       Builder(
         builder: (BuildContext builderContext) {
-          _timer = Timer(const Duration(seconds: 2), () {
+          timer = Timer(const Duration(seconds: 2), () {
             Get.back();
           });
 
@@ -167,8 +167,8 @@ class Common {
       barrierColor: Colors.black26,
       transitionCurve: Curves.easeInOutBack,
     ).then((val) {
-      if (_timer!.isActive) {
-        _timer!.cancel();
+      if (timer!.isActive) {
+        timer!.cancel();
       }
     });
   }

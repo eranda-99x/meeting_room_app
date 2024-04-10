@@ -59,13 +59,13 @@ class ApiConnect extends GetConnect {
   }) {
     _checkIfDisposed();
 
-    Map<String, String> _headers = headers ?? <String, String>{};
+    Map<String, String> headers0 = headers ?? <String, String>{};
     // _headers["Authorization"] = "Bearer " + HiveAdapter.getAccessToken();
 
     _reqBody = query;
     return httpClient.get<T>(
       url,
-      headers: _headers,
+      headers: headers0,
       contentType: contentType,
       query: query,
       decoder: decoder,
@@ -82,13 +82,13 @@ class ApiConnect extends GetConnect {
   }) {
     _checkIfDisposed();
 
-    Map<String, String> _headers = headers ?? <String, String>{};
+    Map<String, String> headers0 = headers ?? <String, String>{};
     // _headers["Authorization"] = "Bearer " + HiveAdapter.getAccessToken();
 
     _reqBody = query;
     return httpClient.delete<T>(
       url,
-      headers: _headers,
+      headers: headers0,
       contentType: contentType,
       query: query,
       decoder: decoder,
@@ -107,7 +107,7 @@ class ApiConnect extends GetConnect {
   }) {
     _checkIfDisposed();
 
-    Map<String, String> _headers = headers ?? <String, String>{};
+    Map<String, String> headers0 = headers ?? <String, String>{};
     // _headers["Authorization"] = "Bearer " + HiveAdapter.getAccessToken();
     try {
       _reqBody = body;
@@ -118,7 +118,7 @@ class ApiConnect extends GetConnect {
     return httpClient.post<T>(
       url,
       body: body,
-      headers: _headers,
+      headers: headers0,
       contentType: contentType,
       query: query,
       decoder: decoder,
@@ -138,7 +138,7 @@ class ApiConnect extends GetConnect {
   }) {
     _checkIfDisposed();
 
-    Map<String, String> _headers = headers ?? <String, String>{};
+    Map<String, String> headers0 = headers ?? <String, String>{};
     // _headers["Authorization"] = "Bearer " + HiveAdapter.getAccessToken();
 
     _reqBody = body;
@@ -146,7 +146,7 @@ class ApiConnect extends GetConnect {
     return httpClient.put<T>(
       url,
       body: body,
-      headers: _headers,
+      headers: headers0,
       contentType: contentType,
       query: query,
       decoder: decoder,

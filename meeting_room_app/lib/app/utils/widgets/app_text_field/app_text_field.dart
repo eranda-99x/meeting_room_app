@@ -7,11 +7,11 @@ import 'package:meeting_room_app/app/translations/app_translations.dart';
 
 class AppTextField extends StatefulWidget {
   const AppTextField({
-    Key? key,
+    super.key,
     this.hintText,
     this.errorText,
     this.obscureText,
-  }) : super(key: key);
+  });
   final String? hintText;
   final String? errorText;
   final bool? obscureText;
