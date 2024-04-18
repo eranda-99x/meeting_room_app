@@ -11,23 +11,27 @@ class HomePage extends GetWidget<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
+          child: Padding(
+        padding: const EdgeInsets.all(40.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const AppTextField(),
+            const AppTextField(
+              hintText: 'Email',
+            ),
+            const SizedBox(height: 16),
+            const AppTextField(
+              hintText: 'Password',
+              obscureText: true,
+            ),
             const SizedBox(height: 16),
             AppButton(
               onPressed: () {},
-              text: 'Click',
+              text: 'Login',
             ),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
+      )),
     );
   }
 }
